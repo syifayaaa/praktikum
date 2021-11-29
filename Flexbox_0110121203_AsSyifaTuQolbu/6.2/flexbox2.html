@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Desain</title>
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0; 
+          padding: 0;
+        }
+        .container {
+            display: flex;
+            font-size: 30px;
+            justify-content: space-between;
+        }
+        nav {
+            background-color: lightpink;
+            height: 100vh;
+            width: 50%;
+            padding: 10px;
+        }
+        header, footer {
+            background-color: khaki;
+            height: 20vh;
+            width: 100%;
+            padding: 10px;
+        }
+        .isi {
+            display: flex;
+            flex-direction: row;
+            height: 60vh;
+        }
+        article {
+            background-color: white;
+            width: 750px;
+            padding: 10px
+        }
+        aside {
+            background-color: turquoise;
+            width: 300px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>Nav</nav>
+        <div>
+            <header>Header</header>
+            <div class="isi">
+                <article><h4>Article</h4></article>
+                <aside>Aside</aside>
+            </div>
+            <footer>Footer</footer>
+        </div>
+    </div>
+</body>
+</html>

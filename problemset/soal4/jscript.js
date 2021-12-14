@@ -1,6 +1,6 @@
-function bil(){
-    var bil1 = document.getElementById(bil1).value;
-    var bil2 = document.getElementById(bil2).value;
-    var total = 4 + 5;
-    alert(total);
+function hitung(){
+    let x = Number(document.getElementById("bil1").value);
+    let y = Number(document.getElementById("bil2").value);
+    let total = x + y;
+    document.getElementById("bil3").value=total;
 }

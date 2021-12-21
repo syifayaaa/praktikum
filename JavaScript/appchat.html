@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Chat</title>
+    
+    <style>
+        body {
+            width: 85rem;
+            min-height: 500px;
+            border:  ridge;
+            margin: auto;
+            box-sizing: border-box;
+            position: relative;
+        }
+        #pesan {
+            position: absolute;
+            bottom: 0;
+            width: 80rem;
+        }
+        button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="hasil"></h2>
+    <input type="text" id="pesan" onchange="kirim()">
+    <button onclick="kirim()">Kirim</button>
+
+    <script>
+        let input = document.getElementById("pesan")
+        let hasil = document.getElementById("hasil")
+        let room = ""
+
+        function kirim() {
+            room += input.value + "<br>"
+            hasil.innerHTML = room 
+            input.value = ""
+        }
+    </script>
+</body>
+</html>

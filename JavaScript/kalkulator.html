@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator kurs rupiah</title>
+    <!-- <script>
+        function hitung(){
+            const dolus = 9.915;
+            const dolsing = 13.472;
+            const ringgit = 874;
+            const yen = 120;
+            const euro = 15.888;
+            const riyal = 3.592;
+            let x = Number(document.getElementById("bil").value);
+            let y = document.getElementById("valas");
+            let US = x * dolus;
+            let sing = x * dolsing;
+            let malay = x * ringgit;
+            let jepan = x * yen;
+            let eur = x * euro;
+            let arab = x * riyal;
+            if (document.getElementById("bil").value=document.getElementById("valas")){
+                document.getElementById("bilrp").value = US;  
+            }else if (document.getElementById("bil").value=document.getElementById("valas")){
+                document.getElementById("bilrp").value = sing;
+            }else if (document.getElementById("bil").value=document.getElementById("valas")){
+                document.getElementById("bilrp").value = malay;
+            }else if (document.getElementById("bil").value=document.getElementById("valas")){
+                document.getElementById("bilrp").value = jepan;
+            }else if (document.getElementById("bil").value=document.getElementById("valas")){
+                document.getElementById("bilrp").value = eur;
+            }else if (document.getElementById("bil").value=document.getElementById("valas")){
+                document.getElementById("bilrp").value = arab;
+            }else{
+
+            }
+                
+        }
+    </script> -->
+    <!-- <script>
+        function hitung(){
+            const kursMataUang = {
+            "usd" :  9915,
+            "sgd" : 13472,
+            "rm"  :   874, 
+            "yen" :   120,
+            "eur" : 15888,
+            "sar" :  3592,
+            }
+                let US = x * dolus;
+                let sing = x * dolsing;
+                let malay = x * ringgit;
+                let jepan = x * yen;
+                let eur = x * euro;
+                let arab = x * riyal;
+
+            let x = (document.getElementById("bil").value);
+            let matauang = document.getElementById("valas");
+            if ((document.getElementById("bil").value)==kursMataUang.usd){
+                document.getElementById("bilrp").value = US;
+            }else if ((document.getElementById("bil").value)*kursMataUang.usd){
+                document.getElementById("bilrp").value = sing;
+            }else if ((document.getElementById("bil").value)*kursMataUang.usd){
+                document.getElementById("bilrp").value = malay;
+            }else if ((document.getElementById("bil").value)*kursMataUang.usd){
+                document.getElementById("bilrp").value = jepan;
+            }else if ((document.getElementById("bil").value)*kursMataUang.usd){
+                document.getElementById("bilrp").value = eur;
+            }else{
+                document.getElementById("bilrp").value = arab;
+            }
+                
+        }
+    </script> -->
+    <!-- <script>
+        const input = document.getElementById("bil");
+        const hitungbtn = document.getElementById("valas");
+        const hasil = document.getElementById("bilrp");
+
+        const kursMataUang = {
+            "usd" :  9915,
+            "sgd" : 13472,
+            "rm"  :   874, 
+            "yen" :   120,
+            "eur" : 15888,
+            "sar" :  3592,
+        }
+
+        hitungbtn.addEventListener("click", function() {
+            console.log("button diklik");
+            if (kursSelect.value == "usd"){
+                hasil.innerHTML = "Nilai Rupiah :" + bil.value * kursMataUang.usd;
+            }
+            else if (kursSelect.value == "sgd") {
+                hasil.innerHTML = "Nilai Rupiah :" + bil.value * kursMataUang.sgd;
+            }
+            else if (kursSelect.value == "eur"){
+                hasil.innerHTML = "Nilai Rupiah :" + bil.value * kursMataUang.eur;
+            }
+            else if (kursSelect.value == "rm"){
+                hasil.innerHTML = "Nilai Rupiah :" + bil.value * kursMataUang.rm;
+            }
+            else if (kursSelect.value == "yen"){
+                hasil.innerHTML = "Nilai Rupiah :" + bil.value * kursMataUang.yen;
+            }
+            else if (kursSelect.value == "sar"){
+                hasil.innerHTML = "Nilai Rupiah :" + bil.value * kursMataUang.sar;
+            }
+        })
+    </script> -->
+    <script>
+        function hitung() {
+            let x = document.getElementById("bil").value; 
+            let y = document.getElementById("valas").value;
+            let result = parseInt(x) * parseInt(y);
+            if (result) {
+                document.getElementById("hasil").value = result;
+            }
+        }
+        
+
+    </script>
+    <style>
+        table, td{
+            border-style: ridge;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table>
+            <tr>
+                <td>Masukan Nilai</td>
+                <td>Valas</td>
+                <td>Nilai Rupiah</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="bil" onchange="hitung()"></td>
+                <td><select name="valas" id="valas" onchange="hitung()">
+                    <option value="9915">Dollar US</option>
+                    <option value="13472">Dollar Singapure</option>
+                    <option value="874">Ringgit Malaysia</option>
+                    <option value="120">Yen Jepan</option>
+                    <option value="15888">Euro</option>
+                    <option value="3592">Riyal Arab Saudi</option>
+                </select></td>
+                <td><input type="text" id="hasil"></td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>
